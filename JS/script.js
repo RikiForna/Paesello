@@ -14,18 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
       ingredients: "Ingredienti",
       ingredient: "Ingrediente",
       quantity: "Quantità",
-      grapes: "UVA",
+      grapes: "Uva",
       must: "MOSTO DI UVE CONCENTRATO",
       preservatives: "CONSERVANTI E ANTIOSSIDANTI",
-      stabilizers: "AGENTI STABILIZZANTI",
+      rawMaterial: "<strong>MATERIA PRIMA</strong>",
+      additives: "<strong>CONSERVANTI</strong>",
+      stabilizers: "<strong>STABILIZZANTI</strong>",
+      technologicalAids: "<strong>COADIUVANTI TECNOLOGICI</strong>",
       nutrition: "Valori Nutrizionali (per 100ml)",
       component: "Componente",
       value: "Valore",
       energy: "Energia",
       fats: "Grassi",
-      saturatedFats: "di cui grassi saturi",
+      saturatedFats: "Acidi grassi insaturi",
       carbohydrates: "Carboidrati",
-      sugars: "di cui zuccheri",
+      sugars: "Zuccheri",
       proteins: "Proteine",
       fibers: "Fibre",
       salt: "Sale",
@@ -52,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       woodFOR50: "FOR50 (LEGNO)",
       metals: "CFE91 Metalli",
       metal: "Metallo",
+      lieviti: "Lieviti per vinificazione",
       instructionText: "Separa le componenti e conferiscile nel modo corretto",
     },
     en: {
@@ -65,18 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
       ingredients: "Ingredients",
       ingredient: "Ingredient",
       quantity: "Quantity",
-      grapes: "GRAPES",
+      grapes: "Grapes",
       must: "CONCENTRATED GRAPE MUST",
-      preservatives: "PRESERVATIVES AND ANTIOXIDANTS",
-      stabilizers: "STABILIZING AGENTS",
+      rawMaterial: "<strong>RAW MATERIAL</strong>",
+      additives: "<strong>PRESERVATIVES</strong>",
+      stabilizers: "<strong>STABILIZERS</strong>",
+      technologicalAids: "<strong>TECHNOLOGICAL AIDS</strong>",
       nutrition: "Nutritional Values (per 100ml)",
       component: "Component",
       value: "Value",
       energy: "Energy",
       fats: "Fats",
-      saturatedFats: "of which saturated fats",
+      saturatedFats: "unsaturated fatty acids",
       carbohydrates: "Carbohydrates",
-      sugars: "of which sugars",
+      sugars: "Sugars",
       proteins: "Proteins",
       fibers: "Fibers",
       salt: "Salt",
@@ -103,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       woodFOR50: "FOR50 (WOOD)",
       metals: " CFE91 Metals",
       metal: " Metal",
+      lieviti: "Yeasts for winemaking",
       instructionText: "Separate the components and dispose of them correctly",
     },
   };
@@ -111,13 +118,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-lang]").forEach((element) => {
       const key = element.getAttribute("data-lang");
       if (texts[lang][key]) {
-        element.innerText = texts[lang][key];
+        element.innerHTML = texts[lang][key];
       }
     });
     localStorage.setItem("selectedLanguage", lang);
   }
 
-  const savedLang = localStorage.getItem("selectedLanguage") || "en";
+  // Imposta sempre l'italiano quando la pagina viene caricata
+  const savedLang = "it";
   languageSelect.value = savedLang;
   changeLanguage(savedLang);
 

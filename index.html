@@ -23,13 +23,14 @@
             <img src="img/Screenshot 2025-03-05 233824.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
             Fornaseri
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" data-lang="home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" data-lang="home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-lang="features">Features</a>
@@ -43,6 +44,7 @@
             </ul>
         </div>
     </nav>
+    
 
     <!-- Filtro lingua -->
     <div class="container mt-3">
@@ -56,40 +58,37 @@
     <div class="row d-flex flex-column flex-md-row align-items-center">
         <!-- Immagine -->
         <div class="col-md-3 text-center order-md-1">
-            <img src="img/Paesello.png" class="image-container img-fluid mx-auto d-block" alt="CAVIF">
+            <img src="img/Paesello.png" class="image-container img-fluid mx-auto d-block" alt="Paesello">
         </div>
     
         <!-- Testo e Tabelle -->
         <div class="col-md-9 order-md-2">
             <h1 class="text-center" id="vino">PAESELLO</h1>
             <h2 class="text-center" data-lang="wineTitle">Vino Rosso</h2>
+            <h4 class="text-center">(2L)</h4>
     
             <h2 class="mt-4 text-center" data-lang="ingredients">Ingredienti</h2>
 
 
-  <!-- Testo e Tabelle
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th data-lang="ingredient">Ingrediente</th>
-                        <th data-lang="quantity">Quantità</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td data-lang="grapes">UVA</td><td>X</td></tr>
-                    <tr><td data-lang="must">MOSTO DI UVE CONCENTRATO</td><td>X</td></tr>
-                    <tr><td data-lang="preservatives">CONSERVANTI E ANTIOSSIDANTI</td><td>E224</td></tr>
-                    <tr><td data-lang="stabilizers">AGENTI STABILIZZANTI</td><td>E353</td></tr>
-                </tbody>
-            </table>
-        -->
+  <!-- Testo e Tabelle   -->
 
+             <!-- Testo e Tabelle-->
+  <table class="table table-bordered">
+    <tbody>
+        <tr><td data-lang="rawMaterial"><strong>MATERIA PRIMA</strong></td><td data-lang="grapes">Uva</td></tr>
+        <tr><td rowspan="2" data-lang="additives"><strong>CONSERVANTI</strong></td><td data-lang="e224">E224</td></tr>
+        <tr><td data-lang="lieviti">Lieviti per vinificazione</td></tr>
+        <tr><td rowspan="2" data-lang="stabilizers"><strong>STABILIZZANTI</strong></td><td data-lang="e414">E414</td></tr>
+        <tr><td data-lang="e456">E456</td></tr>
+        <tr><td data-lang="technologicalAids"><strong>COADIUVANTI TECNOLOGICI</strong></td><td data-lang="bentonite">Bentonite</td></tr>
+    </tbody>
+</table>
     
             <h2 class="mt-4 text-center" data-lang="nutrition">Valori Nutrizionali (per 100ml)</h2>
 
 
-              <!-- Testo e Tabelle 
-            <table class="table table-striped">
+              <!-- Testo e Tabelle    -->
+             <table class="table table-bordered text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th data-lang="component">Componente</th>
@@ -97,26 +96,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td data-lang="energy">Energia</td><td>285 KJ / 68 Kcal</td></tr>
-                    <tr><td data-lang="fats">Grassi</td><td>0g</td></tr>
-                    <tr><td data-lang="saturatedFats">di cui grassi saturi</td><td>0g</td></tr>
-                    <tr><td data-lang="carbohydrates">Carboidrati</td><td>0.04g</td></tr>
-                    <tr><td data-lang="sugars">di cui zuccheri</td><td>0.04g</td></tr>
-                    <tr><td data-lang="proteins">Proteine</td><td>0g</td></tr>
-                    <tr><td data-lang="fibers">Fibre</td><td>0g</td></tr>
-                    <tr><td data-lang="salt">Sale</td><td>0g</td></tr>
+                    <tr><td data-lang="energy">Energia</td><td>265,8 KJ / 63,6 Kcal</td></tr>
+                    <tr><td data-lang="fats">Grassi</td><td> < 0.1 g </td></tr>
+                    <tr><td data-lang="saturatedFats">Acidi grassi insaturi</td><td> < 0.1 g</td></tr>
+                    <tr><td data-lang="carbohydrates">Carboidrati</td><td>0.2 g</td></tr>
+                    <tr><td data-lang="sugars">Zuccheri</td><td>0.2 g</td></tr>
+                    <tr><td data-lang="proteins">Proteine</td><td> < 0.01 g</td></tr>
+                    <tr><td data-lang="salt">Sale</td><td> 3.77 mg</td></tr>
                 </tbody>
             </table>
 
-        -->
+        
         </div>
     </div>
 
 
 
+
     <!-- Tabella Raccolta Differenziata -->
     <h2 class="mt-4" data-lang="recycling">Raccolta Differenziata</h2>
-    <table class="table table-bordered table-striped text-center">
+    <table class="table table-bordered text-center">
         <thead class="thead-dark">
             <tr>
                 <th scope="col" data-lang="material">Materiale</th>
